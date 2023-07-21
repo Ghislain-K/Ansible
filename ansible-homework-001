@@ -1,1 +1,52 @@
+Homework #1
+
+Create  role.yml playbook defined. It will run on all hosts if not otherwise specified in the command line, it will run as root user on port 22 (SSH), it will gather facts before running the roles, and it will run all three roles mentioned before. Each role can be run independently by specifying the tag in the ansible-playbook command line with the –t parameter.
+
+Step #1:
+
+$ vi role.yml
+---
+- name: Run roles playbook
+  hosts: all
+  become: true
+  become_user: root
+  gather_facts: true
+
+  tasks:
+    - name: Run role1
+      include_role:
+        name: role1
+      tags:
+        - role1
+
+    - name: Run role2
+      include_role:
+        name: role2
+      tags:
+        - role2
+
+    - name: Run role3
+      include_role:
+        name: role3
+      tags:
+        - role3
+
+Step #2:
+
+You can execute this playbook by running the following command:
+
+$ ansible-playbook role.yml
+
+
+EXECUTION PROCEDURE
+1.	$ ansible-playbook -i my-inventory role.yml --syntax-check
+2.	$ ansible-playbook -i my-inventory role.yml -C
+3.	$ ansible-playbook -i my-inventory role.yml
+
+By default, it will run all three roles on all hosts. If you want to run a specific role, you can specify its tag using the --tags (-t) parameter:
+
+$ ansible-playbook -i my-inventory role.yml --tags role1
+
+This command will execute only role1 on all hosts. You can replace role1 with role2 or role3 to run other roles individually.
+
 
