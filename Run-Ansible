@@ -1,1 +1,15 @@
+Step #1:
 
+$ vi [playbook_script_name].yaml       (or .yml)
+    N.B: Always start with --- (03 dash)
+
+Step #2: $ ansible-playbook -i my-inventory [playbook.yml] --syntax-check 	(To check the playbook syntax. No Respone = GOOD)
+
+Step #3: $ ansible-playbook -i my-inventory [playbook.yml] -C	(DRY-RUN)
+
+Step #4: $ ansible-playbook -i my-inventory [playbook.yml]   (TO APPLY THE PLAYBOOK)
+
+
+
+-	cp user.yml directory.yml	(copy an existing file to a new file to serve time)
+-	vi directoty.yml		(Then modify this current file) 
