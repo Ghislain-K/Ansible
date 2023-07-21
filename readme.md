@@ -49,6 +49,10 @@ how to run ansible ad-hoc with super user (root) with uid/pwd
 
 ![image](https://github.com/Ghislain-K/Ansible/assets/113010720/69edfe7a-a147-4e50-8a00-73fc64b0b299)
 
+![image](https://github.com/Ghislain-K/Ansible/assets/113010720/18712ce9-cf30-4c66-b121-32be5e1289a1)
+
+
+![image](https://github.com/Ghislain-K/Ansible/assets/113010720/47f5c8aa-d529-413d-8dec-1aa11542a4c9)
 
 
 
