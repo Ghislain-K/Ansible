@@ -1,1 +1,14 @@
+---
+ - name: creat a user
+   hosts: servers
+   become: yes
+   become_user: root
+   tasks:
+    - name: creat user mike zock
+      user:
+       name: mikezock
+       password: oqRtRlcJ1MX32
+       comment: Mike Zock
+       uid: 1040
+       group: wheel
 
