@@ -44,3 +44,12 @@ how to run ansible ad-hoc with super user (root) with uid/pwd
         ansible all -i /path/to/inventory -b -u username -k -K
         ansible dev -i /path/to/inventory -m copy -a "src=/tmp/new.txt dest=/tmp" -b -u username -k -K
 ```
+
+
+
+![image](https://github.com/Ghislain-K/Ansible/assets/113010720/69edfe7a-a147-4e50-8a00-73fc64b0b299)
+
+
+
+
+
