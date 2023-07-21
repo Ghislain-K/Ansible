@@ -1,1 +1,13 @@
-
+---
+ - name: create a cron job
+   hosts: servers
+   become: yes
+   become_user: root
+   tasks:
+      - name: create a cron job
+         cron:
+         name: “set the [file_name]”
+         minute: 0
+         hour: 18
+         job: /home/[user_name]/[file_name].sh
+         user: [user_name]
